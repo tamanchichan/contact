@@ -3,6 +3,7 @@
 :root {
   --body-bg-color: #171a22;
   --body-color: #fff;
+  --box-bg-color: #272a33;
   --input-bg-color: #272a33;
   --input-color: #fff;
   --button-bg-color: #009d5d;
@@ -17,7 +18,7 @@ body {
 
 /* class */
 .box {
-  background-color: #fff;
+  background-color: var(--box-bg-color);
   border-radius: 15px;
   height: 150px;
   width: 300px;

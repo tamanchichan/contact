@@ -18,13 +18,14 @@ body {
 /* class */
 .box {
   background-color: #fff;
+  border-radius: 15px;
   height: 150px;
   width: 300px;
 }
 
 .contacts {
   display: grid;
-  gap: 10px;
+  gap: 20px;
   grid-template-columns: auto auto auto;
   margin-top: 50px;
 }

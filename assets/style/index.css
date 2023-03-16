@@ -18,3 +18,9 @@ body {
   margin-inline: auto;
   width: min(100% - 30px, 1080px);
 }
+
+.grid {
+  display: grid;
+  place-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}

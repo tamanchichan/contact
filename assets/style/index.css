@@ -14,13 +14,33 @@ body {
 }
 
 /* class */
+.box {
+  background-color: #fff;
+  height: 100px;
+  width: 200px;
+}
+
+.contacts {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
 .container {
   margin-inline: auto;
   width: min(100% - 30px, 1080px);
 }
 
+.flex {
+  display: flex;
+}
+
 .grid {
   display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  /* height: 100vh; */
   place-content: center;
-  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.title {
+  width: max-content;
 }

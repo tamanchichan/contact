@@ -4,7 +4,9 @@
   --body-bg-color: #171a22;
   --body-color: #fff;
   --input-bg-color: #272a33;
+  --input-color: #fff;
   --button-bg-color: #009d5d;
+  --button-color: #fff;
 }
 
 /* html */
@@ -61,11 +63,15 @@ main .title h1 {
 }
 
 main .input input {
+  background-color: var(--input-bg-color);
+  color: var(--input-color);
   margin-right: 15px;
   width: 300px;
 }
 
 main .input button {
+  background-color: var(--button-bg-color);
+  color: var(--button-color);
   width: 100px;
 }
 

@@ -77,8 +77,9 @@ main .input input:focus {
 main .input button {
   background-color: var(--button-bg-color);
   color: var(--button-color);
+  letter-spacing: 2px;
   text-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   width: 100px;
 }
 
@@ -89,4 +90,5 @@ main .input button:hover {
 main .input input, .input button {
   box-shadow: 0px 0px 1px rgba(255, 255, 255, 0.5);
   border-radius: 10px;
+  font-size: 16px;
 }

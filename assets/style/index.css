@@ -66,7 +66,7 @@ main .title h1 {
   text-align: center;
 }
 
-main .input input {
+main .input .input-field {
   background-color: var(--input-bg-color);
   color: var(--input-color);
   margin-right: 15px;
@@ -74,11 +74,11 @@ main .input input {
   width: 300px;
 }
 
-main .input input:focus {
+main .input .input-field:focus {
   box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.5);
 }
 
-main .input button {
+main .input .button {
   background-color: var(--button-bg-color);
   color: var(--button-color);
   letter-spacing: 2px;
@@ -87,11 +87,11 @@ main .input button {
   width: 100px;
 }
 
-main .input button:hover {
+main .input .button:hover {
   box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.5);
 }
 
-main .input input, .input button {
+main .input .input-field, .input .button {
   box-shadow: 0px 0px 1px rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   font-size: 16px;

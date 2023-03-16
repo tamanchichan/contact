@@ -18,13 +18,15 @@ body {
 /* class */
 .box {
   background-color: #fff;
-  height: 100px;
-  width: 200px;
+  height: 150px;
+  width: 300px;
 }
 
 .contacts {
   display: grid;
+  gap: 10px;
   grid-template-columns: auto auto auto;
+  margin-top: 50px;
 }
 
 .container {
@@ -46,6 +48,7 @@ body {
 
 .input {
   font-size: 0px;
+  justify-content: center;
   margin-top: 25px;
   height: 35px;
 }

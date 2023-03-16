@@ -7,6 +7,12 @@
   --button-bg-color: #009d5d;
 }
 
+/* html */
+body {
+  background-color: var(--body-bg-color);
+  color: var(--body-color);
+}
+
 /* class */
 .container {
   margin-inline: auto;

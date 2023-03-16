@@ -25,9 +25,10 @@ body {
 
 .contacts {
   display: grid;
-  gap: 20px;
-  grid-template-columns: auto auto auto;
+  gap: 25px;
+  grid-template-columns: 1fr 1fr 1fr;
   margin-top: 50px;
+  
 }
 
 .container {
@@ -49,9 +50,10 @@ body {
 
 .input {
   font-size: 0px;
-  justify-content: center;
-  margin-top: 25px;
   height: 35px;
+  justify-content: center;
+  line-height: 35px;
+  margin-top: 25px;
 }
 
 .title {

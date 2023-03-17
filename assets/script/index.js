@@ -44,50 +44,56 @@ button.addEventListener('click', () => {
   let email = value[1];
   let city = value[2];
   
-  if (value.length === 3) {
-  const newContact = new Contact(name, email, city);
+  if (email.includes('@') && email.endsWith('.com')) {
+    if (value.length === 3) {
+      const newContact = new Contact(name, email, city);
+        
+      const box = document.createElement('div');
+      box.classList.add('box');
+        
+      function listContacts() {
+        let p1 = document.createElement('p');
+        let p2 = document.createElement('p');
+        let p3 = document.createElement('p');
+        
+        name = name.toString().charAt(0).toUpperCase() + name.trim().slice(1);
+        email = email.toString().trim().toLowerCase();
+        city =
+        city.toString().trim().charAt(0).toUpperCase() + city.trim().slice(1);
+        
+        p1.innerHTML = `<b>Name:</b> ${name}`;
+        p2.innerHTML = `<b>Email:</b> ${email}`;
+        p3.innerHTML = `<b>City:</b> ${city}`;
+        
+        box.appendChild(p1);
+        box.appendChild(p2);
+        box.appendChild(p3);
+      };
   
-  const box = document.createElement('div');
-  box.classList.add('box');
-  
-  function listContacts() {
-    let p1 = document.createElement('p');
-    let p2 = document.createElement('p');
-    let p3 = document.createElement('p');
-    
-    p1.innerHTML = `<b>Name:</b> ${name}`;
-    p2.innerHTML = `<b>Email:</b> ${email}`;
-    p3.innerHTML = `<b>City:</b> ${city}`;
-    
-    box.appendChild(p1);
-    box.appendChild(p2);
-    box.appendChild(p3);
-  };
-  
-  // create div && array
-  function addContact() {
-    // Insert the new div before the first child element of the container div
-    contacts.insertBefore(box, contacts.firstChild);
-    box.style.cursor = 'pointer';
-    contact.push(newContact);
-    listContacts();
-  }
-  
-  // remove div && array
-  box.onclick = () => {
-    contacts.removeChild(box);
-    contact.splice(contact.indexOf(newContact), 1)
-  }
+      // create div && array
+      function addContact() {
+        // Insert the new div before the first child element of the container div
+        contacts.insertBefore(box, contacts.firstChild);
+        box.style.cursor = 'pointer';
+        contact.push(newContact);
+        listContacts();
+      }
+      
+      // remove div && array
+      box.onclick = () => {
+        contacts.removeChild(box);
+        contact.splice(contact.indexOf(newContact), 1)
+      }
 
-  addContact();
-  
-} else {
-  message.innerText = 'Please follow the example above withouth "()"';
-  
-  setTimeout(() => {
-    message.innerText = '';
-  }, 5000);
-}
+      addContact();
+    }
+  } else {
+    message.innerText = 'Please follow the example above withouth "()"';
+    
+    setTimeout(() => {
+      message.innerText = '';
+    }, 5000);
+  }
 });
 
 // const array = [1, 2, 3, 4, 5];

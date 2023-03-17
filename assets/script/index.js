@@ -36,6 +36,7 @@ button.addEventListener('click', () => {
   let email = value[1];
   let city = value[2];
   
+  if (value.length === 3) {
   const newContact = new Contact(name, email, city);
   
   const box = document.createElement('div');
@@ -54,16 +55,13 @@ button.addEventListener('click', () => {
     box.appendChild(p3);
   };
   
-  // create div
+  // create div && array
   function addContact() {
     contacts.appendChild(box).classList.add('box');
     box.style.cursor = 'pointer';
     contact.push(newContact);
     listContacts();
   }
-  
-  // add to array
-  console.log(contact);
   
   // remove div && array
   box.onclick = () => {
@@ -72,6 +70,9 @@ button.addEventListener('click', () => {
   }
   
   addContact();
+} else {
+  return;
+}
 });
 
 // const array = [1, 2, 3, 4, 5];

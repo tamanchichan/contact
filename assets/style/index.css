@@ -162,6 +162,6 @@ main .input .input-field, .input .button {
   }
   
   main .input .button {
-    margin-top: 15px;
+    margin: 15px 0px 0px 100px;
   }
 }

@@ -20,9 +20,9 @@ body {
 .box {
   background-color: var(--box-bg-color);
   border-radius: 15px;
-  height: 150px;
+  height: 180px;
   padding: 20px;
-  width: 300px;
+  width: 360px;
 }
 
 .contacts {
@@ -75,7 +75,7 @@ main .input .input-field {
   color: var(--input-color);
   margin-right: 15px;
   padding-left: 15px;
-  width: 300px;
+  width: 400px;
 }
 
 main .input .input-field:focus {

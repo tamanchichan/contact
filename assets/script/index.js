@@ -45,9 +45,9 @@ button.addEventListener('click', () => {
     let p2 = document.createElement('p');
     let p3 = document.createElement('p');
     
-    p1.innerHTML = `<b>Name:<b> ${name}`;
-    p2.innerHTML = `<b>Email:<b> ${email}`;
-    p3.innerHTML = `<b>City:<b> ${city}`;
+    p1.innerHTML = `<b>Name:</b> ${name}`;
+    p2.innerHTML = `<b>Email:</b> ${email}`;
+    p3.innerHTML = `<b>City:</b> ${city}`;
     
     box.appendChild(p1);
     box.appendChild(p2);

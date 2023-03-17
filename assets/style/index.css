@@ -19,6 +19,8 @@ body {
 
 /* class */
 .box {
+  align-items: center;
+  display: grid;
   background-color: var(--box-bg-color);
   border-radius: 15px;
   height: 180px;

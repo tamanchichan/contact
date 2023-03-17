@@ -4,10 +4,11 @@
   --body-bg-color: #171a22;
   --body-color: #fff;
   --box-bg-color: #272a33;
-  --input-bg-color: #272a33;
-  --input-color: #fff;
   --button-bg-color: #009d5d;
   --button-color: #fff;
+  --input-bg-color: #272a33;
+  --input-color: #fff;
+  --saved-contacts-bg-color: #2196f3;
 }
 
 /* html */
@@ -23,6 +24,10 @@ body {
   height: 180px;
   padding: 20px;
   width: 360px;
+}
+
+.box:hover {
+  box-shadow: 0px 0px 4px #b64346;
 }
 
 .contacts {
@@ -62,6 +67,14 @@ body {
   height: 25px;
   margin-top: 25px;
   text-align: center;
+}
+
+.saved-contacts {
+  background-color: var(--saved-contacts-bg-color);
+  border-radius: 20px;
+  inset: 30px 150px auto auto;
+  padding: 5px 10px;
+  position: fixed;
 }
 
 .title {

@@ -1,5 +1,6 @@
 'use strict';
 
+const number = document.querySelector('.number');
 const input = document.querySelector('.input-field');
 const button = document.querySelector('.button');
 const message = document.querySelector('.message')
@@ -31,6 +32,12 @@ class Contact {
 
 const contact = [];
 
+number.innerText = 0;
+
+setInterval(() => {
+  number.innerText = contact.length;
+}, 500);
+
 button.addEventListener('click', () => {
   let value = input.value.split(',');
   let name = value[0];
@@ -41,6 +48,7 @@ button.addEventListener('click', () => {
   const newContact = new Contact(name, email, city);
   
   const box = document.createElement('div');
+  box.classList.add('box');
   
   function listContacts() {
     let p1 = document.createElement('p');
@@ -58,7 +66,8 @@ button.addEventListener('click', () => {
   
   // create div && array
   function addContact() {
-    contacts.appendChild(box).classList.add('box');
+    // Insert the new div before the first child element of the container div
+    contacts.insertBefore(box, contacts.firstChild);
     box.style.cursor = 'pointer';
     contact.push(newContact);
     listContacts();
@@ -69,8 +78,9 @@ button.addEventListener('click', () => {
     contacts.removeChild(box);
     contact.splice(contact.indexOf(newContact), 1)
   }
-  
+
   addContact();
+  
 } else {
   message.innerText = 'Please follow the example above withouth "()"';
   

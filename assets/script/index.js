@@ -44,12 +44,13 @@ button.addEventListener('click', () => {
   let email = value[1];
   let city = value[2];
   
-  if (email.includes('@') && email.endsWith('.com')) {
-    if (value.length === 3) {
+  if (value.length === 3) {
+    if (email.includes('@') && email.endsWith('.com')) {
       const newContact = new Contact(name, email, city);
         
       const box = document.createElement('div');
       box.classList.add('box');
+      box.classList.add('recent');
         
       function listContacts() {
         let p1 = document.createElement('p');
@@ -77,6 +78,12 @@ button.addEventListener('click', () => {
         box.style.cursor = 'pointer';
         contact.push(newContact);
         listContacts();
+        
+        setInterval(() => {
+          if (box !== contacts.firstChild) {
+            box.classList.remove('recent');
+          }
+        }, 0)
       }
       
       // remove div && array
@@ -84,11 +91,20 @@ button.addEventListener('click', () => {
         contacts.removeChild(box);
         contact.splice(contact.indexOf(newContact), 1)
       }
-
+      
+      input.value = '';
+      
       addContact();
+    } else {
+      message.innerText = 'Please follow the example: "name, name@email, city"';
+    
+      setTimeout(() => {
+        message.innerText = '';
+      }, 0);
     }
   } else {
-    message.innerText = 'Please follow the example above withouth "()"';
+    input.value = '';
+    message.innerText = 'All inputs are required! (name, email, city)';
     
     setTimeout(() => {
       message.innerText = '';
@@ -96,7 +112,13 @@ button.addEventListener('click', () => {
   }
 });
 
+
+
+
+
 // const array = [1, 2, 3, 4, 5];
 // console.log(array);
 // console.log(array.splice(2, 1))
 // console.log(array);
+
+// (array.length - 1) = last index

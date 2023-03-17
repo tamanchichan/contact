@@ -58,17 +58,23 @@ button.addEventListener('click', () => {
   function addContact() {
     contacts.appendChild(box).classList.add('box');
     box.style.cursor = 'pointer';
+    contact.push(newContact);
     listContacts();
   }
   
   // add to array
-  contact.push(newContact);
   console.log(contact);
   
-  // remove div
+  // remove div && array
   box.onclick = () => {
     contacts.removeChild(box);
+    contact.splice(contact.indexOf(newContact), 1)
   }
   
   addContact();
 });
+
+// const array = [1, 2, 3, 4, 5];
+// console.log(array);
+// console.log(array.splice(2, 1))
+// console.log(array);

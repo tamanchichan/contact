@@ -32,23 +32,43 @@ const contact = [];
 
 button.addEventListener('click', () => {
   let value = input.value.split(',');
-    const newContact = new Contact(value[0], value[1], value[2]);
+  let name = value[0];
+  let email = value[1];
+  let city = value[2];
+  
+  const newContact = new Contact(name, email, city);
+  
+  const box = document.createElement('div');
+  
+  function listContacts() {
+    let p1 = document.createElement('p');
+    let p2 = document.createElement('p');
+    let p3 = document.createElement('p');
+    
+    p1.innerHTML = `<b>Name:<b> ${name}`;
+    p2.innerHTML = `<b>Email:<b> ${email}`;
+    p3.innerHTML = `<b>City:<b> ${city}`;
+    
+    box.appendChild(p1);
+    box.appendChild(p2);
+    box.appendChild(p3);
+  };
   
   // create div
   function addContact() {
-    contacts.appendChild(box, input.value).classList.add('box');
+    contacts.appendChild(box).classList.add('box');
     box.style.cursor = 'pointer';
-    box.appendChild(p).innerHTML = input.value;
-  }
-  
-  // remove div
-  box.onclick = () => {
-    contacts.removeChild(box);
+    listContacts();
   }
   
   // add to array
   contact.push(newContact);
   console.log(contact);
+  
+  // remove div
+  box.onclick = () => {
+    contacts.removeChild(box);
+  }
   
   addContact();
 });

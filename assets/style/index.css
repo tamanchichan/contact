@@ -29,7 +29,7 @@ body {
   display: grid;
   gap: 25px;
   grid-template-columns: 1fr 1fr 1fr;
-  margin-top: 50px;
+  margin-top: 25px;
   
 }
 
@@ -56,6 +56,12 @@ body {
   justify-content: center;
   line-height: 35px;
   margin-top: 25px;
+}
+
+.message {
+  height: 25px;
+  margin-top: 25px;
+  text-align: center;
 }
 
 .title {

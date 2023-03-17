@@ -2,6 +2,7 @@
 
 const input = document.querySelector('.input-field');
 const button = document.querySelector('.button');
+const message = document.querySelector('.message')
 const contacts = document.querySelector('.contacts');
 
 const box = document.createElement('div');
@@ -71,7 +72,11 @@ button.addEventListener('click', () => {
   
   addContact();
 } else {
-  return;
+  message.innerText = 'Please follow the example above withouth "()"';
+  
+  setTimeout(() => {
+    message.innerText = '';
+  }, 5000);
 }
 });
 

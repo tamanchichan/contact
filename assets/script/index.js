@@ -20,13 +20,13 @@ class Contact {
     this.#city = city;
   }
   
-  set name(name) {this.#name};
+  set name(name) {this.#name = name};
   get name() {return this.#name};
   
-  set email(email) {this.#email};
+  set email(email) {this.#email = email};
   get email() {return this.#email};
   
-  set city(city) {this.#city};
+  set city(city) {this.#city = city};
   get city() {return this.#city};
 }
 

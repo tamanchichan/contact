@@ -13,15 +13,20 @@ class Contact {
   #name;
   #email;
   #city;
-
   
-  set name(name) {this.#name = name};
+  constructor(name, email, city) {
+    this.#name = name;
+    this.#email = email;
+    this.#city = city;
+  }
+  
+  set name(name) {this.#name};
   get name() {return this.#name};
   
-  set email(email) {this.#email = email};
+  set email(email) {this.#email};
   get email() {return this.#email};
   
-  set city(city) {this.#city = city};
+  set city(city) {this.#city};
   get city() {return this.#city};
 }
 

@@ -13,20 +13,15 @@ class Contact {
   #name;
   #email;
   #city;
+
   
-  constructor(name, email, city) {
-    this.#name = name;
-    this.#email = email;
-    this.#city = city;
-  }
-  
-  set name(name) {this.#name};
+  set name(name) {this.#name = name};
   get name() {return this.#name};
   
-  set email(email) {this.#email};
+  set email(email) {this.#email = email};
   get email() {return this.#email};
   
-  set city(city) {this.#city};
+  set city(city) {this.#city = city};
   get city() {return this.#city};
 }
 
@@ -100,7 +95,7 @@ button.addEventListener('click', () => {
     
       setTimeout(() => {
         message.innerText = '';
-      }, 0);
+      }, 5000);
     }
   } else {
     input.value = '';
@@ -111,14 +106,3 @@ button.addEventListener('click', () => {
     }, 5000);
   }
 });
-
-
-
-
-
-// const array = [1, 2, 3, 4, 5];
-// console.log(array);
-// console.log(array.splice(2, 1))
-// console.log(array);
-
-// (array.length - 1) = last index

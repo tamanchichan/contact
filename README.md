@@ -1,5 +1,5 @@
 # Contact
-Web application to save AND delete contacts(data).
+Web application for adding and removing contacts.
 
 # Demo
-Click [here](https://tamanchichan.github.io/saved-contact/) to visit.
+Click [here](https://tamanchichan.github.io/saved-contact/) to visit the web application.

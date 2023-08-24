@@ -90,6 +90,7 @@ button.addEventListener('click', () => {
       box.onclick = () => {
         contacts.removeChild(box);
         contact.splice(contact.indexOf(newContact), 1)
+        number.innerText = contact.length;
       }
     } else {
       message.innerText = 'Please follow the example: "name, name@email, city"';

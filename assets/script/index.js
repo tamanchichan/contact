@@ -34,10 +34,6 @@ const contact = [];
 
 number.innerText = 0;
 
-setInterval(() => {
-  number.innerText = contact.length;
-}, 500);
-
 button.addEventListener('click', () => {
   let value = input.value.split(',');
   let name = value[0];
@@ -86,15 +82,15 @@ button.addEventListener('click', () => {
         }, 0)
       }
       
+      addContact();
+      input.value = '';
+      number.innerText = contact.length;
+      
       // remove div && array
       box.onclick = () => {
         contacts.removeChild(box);
         contact.splice(contact.indexOf(newContact), 1)
       }
-      
-      input.value = '';
-      
-      addContact();
     } else {
       message.innerText = 'Please follow the example: "name, name@email, city"';
     
